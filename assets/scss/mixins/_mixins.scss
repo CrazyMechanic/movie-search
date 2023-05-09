@@ -1,0 +1,15 @@
+@use '../presets' as *;
+
+@mixin box-shadow
+{
+    box-shadow: -5px 14px 20px -2px darken($color-gray-dark, 40%);
+}
+
+@mixin items
+{
+    height: 50px;
+
+    border-radius: 15px;
+    background-color: #0a4e37;
+    box-shadow: 0 0 11px 2px #999;
+}

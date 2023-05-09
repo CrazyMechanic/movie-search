@@ -1,0 +1,80 @@
+@use 'presets' as *;
+@use 'mixins' as *;
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: black;
+}
+
+.container
+{
+    overflow-y: scroll;
+
+    border-radius: 15px;
+    background: linear-gradient(to left, rgba(33, 243, 173, .5), rgba(33, 243, 173, .127));
+    text-shadow: 0 0 10px #fff;
+
+    padding-inline: 15px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar
+    {
+        width: 0;
+        height: 0;
+    }
+}
+
+.search
+{
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__label
+    {
+        &-input
+        {
+            font-size: 1.1rem;
+
+            text-align: end;
+        }
+    }
+
+    &__input
+    {
+        background-color: rgba(255, 255, 255, .679);
+    }
+
+    &__group
+    {
+        &--checkbox
+        {
+            margin-right: 10px;
+            padding-top: 15px;
+        }
+    }
+
+    &__checkbox
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.movie
+{
+    border-radius: 7px;
+
+    @include box-shadow;
+
+    &__image
+    {
+        border-radius: 7px;
+    }
+}
+
+.movies
+{
+    padding-bottom: 27px;
+}

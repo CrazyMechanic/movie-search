@@ -29,17 +29,12 @@ export const createStyle = () => {
     type: 'style',
     attrs: {
       innerHTML: `
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          margin: 0;
-        }
-
         .container {
+          margin-top: 100px;
+          margin-bottom: 100px;
           width: min(100% - 40px, 1280px);
           margin-inline: auto;
+          height: calc(100vh - 200px);
         }
 
         .movies {
@@ -75,7 +70,7 @@ export const createStyle = () => {
           width: 100%;
           padding: 10px 15px;
           border-radius: 7px;
-          border: 1px solid lightsteelblue;
+          border: 1px solid #107956a6;
           margin-bottom: 10px;
         }
 
@@ -104,7 +99,7 @@ export const createMarkup = () => {
 
   createElement({
     type: 'h1',
-    attrs: {innerHTML: 'Приложение для поиска фильмов'},
+    attrs: {innerHTML: 'Додаток для пошуку фільмів'},
     container
   });
 
@@ -125,7 +120,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__label-input',
       for: 'search',
-      innerHTML: 'Текст для поиска'
+      innerHTML: 'Введіть назву фільму'
     },
     container: inputBox
   });
@@ -136,7 +131,7 @@ export const createMarkup = () => {
       class: 'search__input',
       id: 'search',
       type: 'search',
-      placeholder: 'Начните ввод текста...'
+      placeholder: 'Почніть ввод текста...'
     },
     container: inputBox
   });
@@ -164,7 +159,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__label-checkbox',
       for: 'checkbox',
-      innerHTML: 'Добавлять фильмы к текущему списку'
+      innerHTML: 'Додати фільм до</br>поточного списка'
     },
     container: checkBox
   });
@@ -177,7 +172,6 @@ export const createMarkup = () => {
   });
 
   moviesList = document.querySelector('.movies');
-
 };
 
 export const addMoviesToList = (movie) => {
